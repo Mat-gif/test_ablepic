@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MNT-GESTION ABLEPIC</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "vIg8-air8Q4gaJjjX",
+            });
+        })();
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5 "><i>MNT-GESTION ABLEPIC</i></h1>
+    <img src="https://imgs.search.brave.com/KooX22yZKuNn-p0U0LQMD3bTijsfFAGQJ63JwZ82jfs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jYWNo/ZS5tYXJyaW90dC5j/b20vY29udGVudC9k/YW0vbWFycmlvdHQt/cmVuZGl0aW9ucy9O/T1VTSS9ub3VzaS1k/ZXZhLWRvbWFpbi0w/NzIyLWhvci1jbHNj/LmpwZz9vdXRwdXQt/cXVhbGl0eT03MCZp/bnRlcnBvbGF0aW9u/PXByb2dyZXNzaXZl/LWJpbGluZWFyJmRv/d25zaXplPTg1NnB4/Oio" alt="">
+    <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Détails personnels</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="signature-tab" data-bs-toggle="tab" data-bs-target="#signature" type="button" role="tab" aria-controls="signature" aria-selected="false">Nb de Personnes, Voitures et Animaux</button>
+        </li>
+    </ul>
+
+
+
+
+
+
+    <form class="tab-content" id="myTabContent">
+    <section class=" mt-5 mb-5 tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="row">
+            <h2>Détails personnels</h2>
+        </div>
+            <div>
+                <label class="form-label" for="date-reservation">Date de la réservation </label>
+                <input class="form-control"  class="form-control" type="date" id="date-reservation" name="date-reservation">
+            </div>
+            <div>
+                <label class="form-label" for="numero-campement">N° de campement </label>
+                <input class="form-control"  type="number" id="numero-campement" name="numero-campement">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="date-arrivee"  class=" form-label">Date d'arrivée <span class="required-star">*</span></label>
+                    <input class="form-control"  type="date" id="date-arrivee" name="date-arrivee" required />
+                </div>
+                <div class="col">
+                    <label for="heure-arrivee" class=" form-label">Heure d'arrivée <span class="required-star">*</span></label>
+                    <input class="form-control"  type="time" id="heure-arrivee" name="heure-arrivee" required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="date-depart"  class=" form-label">Date de départ prévue <span class="required-star">*</span></label>
+                    <input class="form-control"  type="date" id="date-depart" name="date-depart" required />
+                </div>
+                <div class="col">
+                    <label for="heure-depart" class="form-label">Heure de départ prévue <span class="required-star">*</span></label>
+                    <input class="form-control"  type="time" id="heure-depart" name="heure-depart" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="date-depart-reel"  class="form-label">Date de départ réelle <span class="required-star">*</span></label>
+                    <input class="form-control"  type="date" id="date-depart-reel" name="date-depart-reel" required />
+                </div>
+                <div class="col">
+                    <label for="heure-depart-reel" class="form-label">Heure de départ réelle <span class="required-star">*</span></label>
+                    <input class="form-control"  type="time" id="heure-depart-reel" name="heure-depart-reel" required />
+                </div>
+            </div>
+            <div>
+                <label class="form-label" for="nuits">N° de campement </label>
+                <input class="form-control"  type="number" id="nuits" name="nuits">
+            </div>
+            <div>
+                <label class=" form-label">Responsable de la Réservation <span class="required-star">*</span></label>
+                <div>
+                    <input class="form-control"  type="text" name="responsable" id="responsable-nom" placeholder="Nom" required>
+                    <input class="form-control"  type="text" name="responsable" id="responsable-prenom" placeholder="Prénom" required>
+                </div>
+            </div>
+
+
+            <div>
+                <label class=" form-label" for="nuits">Téléphone <span class="required-star">*</span></label>
+                <input class="form-control"  type="phone" id="phone" name="phone" required>
+            </div>
+
+            <div>
+                <label class=" form-label" for="email">Email <span class="required-star">*</span></label>
+                <input class="form-control"  type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label class="form-label" for="id"> N° carte d'adhérent </label>
+                <input class="form-control"  type="text" id="id" name="id">
+            </div>
+
+            <div>
+                <label class="form-label" for="motif"> Motif de la réservation</label>
+                <input class="form-control"  type="text" id="motif" name="motif">
+            </div>
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+    <section class=" mt-5 mb-5 tab-pane fade" id="signature" role="tabpanel" aria-labelledby="signature-tab">
+        <div class="row">
+            <h2>Nb de Personnes, Voitures et Animaux</h2>
+        </div>
+
+            <div>
+                <label class=" form-label">Nb. de personnes </label>
+                <div>
+                    <label for="adultes">Adultes</label>
+                    <input class="form-control"  type="number" name="adultes" id="adultes">
+                    <label for="enfants">Enfants</label>
+                    <input class="form-control"  type="number" name="enfants" id="enfants">
+                </div>
+            </div>
+            <div>
+                <label class=" form-label">Nb. de voitures et immatriculation </label>
+                <div>
+                    <label for="voitures">Voitures</label>
+                    <input class="form-control"  type="number" name="voitures" id="voitures">
+                    <label for="imat">Immat et Type de VL </label>
+                    <textarea class="form-control"   name="imat" id="imat"></textarea>
+                </div>
+            </div>
+            <div>
+                <label class=" form-label">Nb. de voitures et immatriculation </label>
+                <div>
+                    <label for="animaux">Animaux </label>
+                    <input class="form-control"  type="number" name="animaux" id="animaux">
+                    <label for="detail">Détails animaux </label>
+                    <textarea class="form-control"   name="detail" id="detail" placeholder="nombre de chiens, chats, autres"></textarea>
+                </div>
+            </div>
+            <div>
+                <label class=" form-label">Conditions générales </label>
+                <div class="form-group">
+                    <input type="checkbox" id="portable-credit" name="portable-credit" required>
+                    <label for="portable-credit">Portable avec crédit <span class="required-star">*</span></label>
+                </div>
+
+                <!-- Checkbox : Extincteur -->
+                <div class="form-group">
+                    <input type="checkbox" id="extincteur" name="extincteur" required>
+                    <label for="extincteur">Extincteur obligatoire <span class="required-star">*</span></label>
+                </div>
+
+                <!-- Checkbox : Trousse de premiers secours -->
+                <div class="form-group">
+                    <input type="checkbox" id="premiers-secours" name="premiers-secours" required>
+                    <label for="premiers-secours">Trousse de premiers secours <span class="required-star">*</span></label>
+                </div>
+            </div>
+
+        <a  id="valider" class="btn btn-primary">Valider</a>
+
+
+
+
+    </section>
+    </form>
+
+</div>
+
+
+</body>
+
+<style>
+
+    form div {
+        margin-bottom: 10px;
+    }
+
+    body {
+        background-color: lightgrey;
+    }
+    section{
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: darkgrey 1px 1px 10px;
+    }
+
+    .required-star {
+        color: red;      /* Couleur rouge pour l'étoile */
+        font-weight: bold; /* Mettre l'étoile en gras */
+    }
+
+</style>
+
+
+<script>
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+
+        document.getElementById('valider').addEventListener('click', function(e) {
+            let isOk = document.getElementById('myTabContent').checkValidity();
+            if (isOk) {
+                    event.preventDefault();
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_e9ub9ps', 'template_6ylac79', document.getElementById('myTabContent'))
+                        .then(() => {
+                            console.log('SUCCESS!');
+                        }, (error) => {
+                            console.log('FAILED...', error);
+                        });
+            } else {
+                // Si le formulaire est invalide, il faut déclencher la validation sur chaque champ
+                document.getElementById('myTabContent').classList.add('was-validated');
+            }
+        })
+
+    })
+</script>
+
+
+</html>
